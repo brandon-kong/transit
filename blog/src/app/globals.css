@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-rgb: 255, 255, 255;
+
+  --blog-content-width: 800px;
+  --content-width: 1000px;
+  --navbar-height: 50px;
+  --border-radius: 100px;
+
+  --hero-padding-top: calc(var(--navbar-height) + 4rem);
+
+  --content-padding-x: 2rem;
+  --content-padding-y: 2rem;
+  --content-padding: var(--content-padding-y) var(--content-padding-x);
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background-color: rgb(var(--background-rgb));
+
+  font-family: var(--font-dm-sans);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-libre_baskerville);
+}
