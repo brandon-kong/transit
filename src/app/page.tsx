@@ -7,13 +7,13 @@ export default function Home() {
   return (
     <main className="">
       <div
-      className={'bg-gradient-to-br from-white to-50% to-primary-50'}
+      className={'bg-gradient-to-br from-white to-50% to-primary-50 px-content-padding-x'}
       >
         <HeroSection />
       </div>
 
       <section
-      className={'w-full flex items-center justify-center py-12'}
+      className={'w-full flex items-center justify-center py-12 px-content-padding-x'}
       >
          <TrustedSection />
       </section>

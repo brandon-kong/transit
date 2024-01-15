@@ -5,7 +5,7 @@ export default function HeroSection()
 {
     return (
         <section
-      className={'py-24 pt-hero-pt flex flex-col lg:flex-row gap-8 justify-center'}
+      className={'py-24 pt-hero-pt flex flex-col lg:flex-row gap-8 justify-center items-center'}
       >
 
       

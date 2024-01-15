@@ -89,7 +89,7 @@ export default function TrustedSection()
                         key={index}
                         >
                             <Image src={value.logo} alt={value.name} fill={true}
-                            className={'absolute inset-0 grayscale opacity-50 object-contain'}
+                            className={'absolute inset-0 grayscale opacity-30 object-contain'}
                             />
                         </li>
                     ))
