@@ -41,9 +41,13 @@ export default function HeroSection()
         <div
         className={'relative select-none'}
         >
-             <Image src={'/images/landing/map-mockup.png'} quality={100} alt={'map'} width={600} height={600}
-        className={'drop-shadow-lg'}
-        />
+            <Image src={'/images/landing/map-mockup.png'} quality={100} alt={'map'} width={600} height={600}
+            className={'drop-shadow-lg shadow-primary'}
+            />
+
+            <Image src={'/images/landing/phone-mockup.png'} quality={100} alt={'map'} width={270} height={600}
+            className={'drop-shadow-lg absolute -top-10 left-5'}
+            />
         </div>
        
       </section>

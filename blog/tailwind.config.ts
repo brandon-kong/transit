@@ -14,6 +14,7 @@ const config: Config = {
       fontFamily: {
         sans: ['var(--font-dm-serif-display)'],
         mono: ['var(--font-poppins)'],
+        code: ['var(--font-source-code-pro)'],
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',

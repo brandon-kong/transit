@@ -15,7 +15,7 @@ const LandingHeading = ({ className, children }: TypographyProps) => {
 
 const H1 = ({ className, children }: TypographyProps) => {
     return (
-        <h1 className={cn("scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl", className)}>
+        <h1 className={cn("scroll-m-20 text-4xl font-extrabold tracking-wide lg:text-5xl", className)}>
             {children}
         </h1>
     );
@@ -23,7 +23,7 @@ const H1 = ({ className, children }: TypographyProps) => {
 
 const H2 = ({ className, children }: TypographyProps) => {
     return (
-        <h2 className={cn("scroll-m-20 text-3xl font-semibold tracking-tight first:mt-0", className)}>
+        <h2 className={cn("scroll-m-20 text-3xl font-semibold tracking-wide first:mt-0", className)}>
             {children}
         </h2>
     );
@@ -31,7 +31,7 @@ const H2 = ({ className, children }: TypographyProps) => {
 
 const H3 = ({ className, children }: TypographyProps) => {
     return (
-        <h3 className={cn("scroll-m-20 text-2xl font-semibold tracking-tight", className)}>
+        <h3 className={cn("scroll-m-20 text-2xl font-semibold tracking-wide", className)}>
             {children}
         </h3>
     );
