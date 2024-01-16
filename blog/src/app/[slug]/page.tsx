@@ -135,7 +135,7 @@ const Post = async ({ params }: { params: { slug: string}}) => {
           className={'text-primary'}
           >
               Written by <Button variant={'link'} className={'text-xl text-current no-underline hover:underline hover:underline-offset-4 hover:translate-y-0 font-semibold'}
-              href={metadata.author_website || null}
+              href={metadata.author_website || undefined}
               >{ metadata.author }</Button>
           </H4>
 
