@@ -10,11 +10,13 @@ import cn from "@/util/cn";
 const navbarElements = [
     {
         label: 'Home',
-        href: 'http://localhost:3000'
+        href: 'http://localhost:3000',
+        className: 'hidden md:flex'
     },
     {
         label: 'About us',
-        href: '#'
+        href: '#',
+        className: 'hidden md:flex'
     },
     {
         label: 'Contact us',
