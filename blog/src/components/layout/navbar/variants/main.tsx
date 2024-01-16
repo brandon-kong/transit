@@ -21,6 +21,7 @@ export default function MainNavbar ()
                     
                     <Link href={"/"} className="px-3 flex items-center flex-shrink-0">
                         <Image src={'/brand/transit-logo-solid.svg'} alt={'logo'} width={25} height={25}
+                        className={'w-[25px] h-[25px]'}
                         />
                        <H4
                        className={'ml-3'}
