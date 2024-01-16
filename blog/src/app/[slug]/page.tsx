@@ -48,7 +48,6 @@ export async function generateMetadata(
   { params, searchParams }: Props,
   parent: ResolvingMetadata
 ): Promise<Metadata> {
-  const { slug } = params;
 
   const fromContentful = await getEntry(params.slug); 
   
@@ -65,8 +64,6 @@ export async function generateMetadata(
 }
 
 const Post = async ({ params }: { params: { slug: string}}) => {
-
-  const postData = getPosts(params.slug); 
 
   const fromContentful = await getEntry(params.slug);
   
@@ -122,27 +119,27 @@ const Post = async ({ params }: { params: { slug: string}}) => {
       >
 
         <P
-        className={'text-xl text-primary'}
+        className={'text-lg text-primary'}
         >
-        Reading time: {readingTime(content).text}
+        {readingTime(content).text}
         </P>
 
         <div
         className={'flex flex-col items-center md:items-end'}
         >
 
-          <H4
-          className={'text-primary'}
+          <P
+          className={'text-primary text-xl'}
           >
-              Written by <Button variant={'link'} className={'text-xl text-current no-underline hover:underline hover:underline-offset-4 hover:translate-y-0 font-semibold'}
+              Written by <Button variant={'link'} className={'select-auto text-md transition-none text-current no-underline hover:underline hover:translate-y-0 font-normal'}
               href={metadata.author_website || undefined}
               >{ metadata.author }</Button>
-          </H4>
+          </P>
 
           <P
-          className={'text-xl'}
+          className={''}
           >
-              { metadata.publish_date }
+              Last edit on { new Date(metadata.publish_date).toLocaleDateString() }
           </P>
         </div>
 

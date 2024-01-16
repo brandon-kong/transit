@@ -8,12 +8,12 @@
 
   --blog-content-width: 750px;
   --content-width: 1000px;
-  --navbar-height: 50px;
+  --navbar-height: 70px;
   --border-radius: 100px;
 
   --hero-padding-top: calc(var(--navbar-height) + 4rem);
 
-  --content-padding-x: 3rem;
+  --content-padding-x: 2rem;
   --content-padding-y: 2rem;
   --content-padding: var(--content-padding-y) var(--content-padding-x);
 }

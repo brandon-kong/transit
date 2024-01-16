@@ -1,10 +1,10 @@
 import { MDXRemote } from 'next-mdx-remote/rsc';
-import { H1, H2, H3, H4, P } from '..';
+import { Button, H1, H2, H3, H4, P } from '..';
 import Image from 'next/image';
-
 
 import rehypeHighlight from 'rehype-highlight';
 import remarkGfm from 'remark-gfm';
+import Link from 'next/link';
 
 const options = {
   mdxOptions: {
@@ -39,7 +39,7 @@ const Blog: React.FC<BlogProps> = ({ source }) => {
       th: ({ children }) => <th className={'p-4 text-left'}>{children}</th>,
       video: ({ src }) => <video className={'rounded-lg'} src={src} controls={true} />,
       iframe: ({ src }) => <div className={'rounded-lg overflow-hidden w-full'}><iframe className={'rounded-lg w-full'} src={src} /></div>,
-      
+      a: ({ children, href }) => <Button variant={'link'} size={'lg'} className={'text-md hover:translate-y-0 transition-none'} href={href} > { children }</Button>
     }}
     options={options}
     />;
