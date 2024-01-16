@@ -9,7 +9,7 @@ import remarkGfm from 'remark-gfm';
 const options = {
   mdxOptions: {
     remarkPlugins: [remarkGfm],
-    rehypePlugins: [rehypeHighlight],
+    rehypePlugins: [rehypeHighlight as any],
   }
 }
 
