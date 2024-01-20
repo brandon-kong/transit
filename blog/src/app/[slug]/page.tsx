@@ -15,9 +15,8 @@ import Blog from '@/components/blog';
 import readingTime from 'reading-time';
 import { notFound } from 'next/navigation';
 import { Metadata, ResolvingMetadata } from 'next';
-import { getEntries, getEntry } from '@/util/retrieve';
+import { getEntries, getEntry, getPublishedEntry } from '@/util/retrieve';
 
-import { Document } from '@contentful/rich-text-types';
 import { cache } from 'react';
 
 // image type
@@ -49,7 +48,7 @@ export async function generateMetadata(
   parent: ResolvingMetadata
 ): Promise<Metadata> {
 
-  const fromContentful = await getEntry(params.slug); 
+  const fromContentful = await getPublishedEntry(params.slug); 
   
   if (fromContentful.total === 0) {
     notFound();
@@ -86,12 +85,12 @@ const Post = async ({ params }: { params: { slug: string}}) => {
     description: item.fields.description as string,
     image: item.fields.featuredImage as any,
     category: item.fields.category as string,
-    tags: item.fields.tags as string[],
+    tags: item.fields.tags as string[] | undefined,
     published: item.fields.published as boolean,
-    publish_date: item.fields.publishDate as string,
+    publish_date: item.fields.publishDate as string | undefined,
 
     author: item.fields.author as string,
-    author_website: item.fields.authorWebsite as string,
+    author_website: item.fields.authorWebsite as string | undefined,
 
     slug: item.fields.slug,
   }
@@ -139,7 +138,12 @@ const Post = async ({ params }: { params: { slug: string}}) => {
           <P
           className={''}
           >
-              Last edit on { new Date(metadata.publish_date).toLocaleDateString() }
+            {
+              metadata.publish_date ? (
+                <span>Published: {new Date(metadata.publish_date).toLocaleDateString()}</span>
+              ) : null
+            }
+            
           </P>
         </div>
 
@@ -161,7 +165,7 @@ const Post = async ({ params }: { params: { slug: string}}) => {
           >
             
           {
-            metadata.tags.map((value: string, index: number) => (
+            metadata.tags?.map((value: string, index: number) => (
               <Button size={'sm'} variant={'primary-light'} key={index}>{value}</Button>
             ))
           }
