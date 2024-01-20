@@ -61,6 +61,7 @@ const Page = async () => {
               >
                 <Button
                 variant={'outline'}
+                href={item.fields.slug as string}
                 >
                   Read more
                 </Button>
