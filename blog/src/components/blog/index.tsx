@@ -39,7 +39,7 @@ const Blog: React.FC<BlogProps> = ({ source }) => {
       th: ({ children }) => <th className={'p-4 text-left'}>{children}</th>,
       video: ({ src }) => <video className={'rounded-lg'} src={src} controls={true} />,
       iframe: ({ src }) => <div className={'rounded-lg overflow-hidden w-full'}><iframe className={'rounded-lg w-full'} src={src} /></div>,
-      a: ({ children, href }) => <Button variant={'link'} size={'lg'} className={'text-md hover:translate-y-0 transition-none'} href={href} > { children }</Button>
+      a: ({ children, href }) => <Button variant={'link'} size={'lg'} className={'select-auto text-md hover:translate-y-0 transition-none'} href={href} > { children }</Button>
     }}
     options={options}
     />;
