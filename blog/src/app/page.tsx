@@ -1,5 +1,5 @@
 import { getPublishedEntries } from '@/util/retrieve';
-
+import { H2, P, Button } from '@/components';
 const Page = async () => {  
   
   const entries = await getPublishedEntries();
