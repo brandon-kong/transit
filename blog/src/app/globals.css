@@ -29,14 +29,6 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-dm-serif-display);
 }
 
-.prose p {
-  @apply mb-4;
-}
-
-.prose h1 {
-  @apply text-2xl font-bold;
-}
-
-.prose a {
-  @apply text-blue-500 underline;
+::selection {
+  @apply bg-primary-300/50 text-primary-950;
 }
