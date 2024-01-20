@@ -34,7 +34,7 @@ const Page = async () => {
           key={index}
           className={'flex flex-col gap-5 border shadow-md rounded-lg p-4 max-w-sm'}
           >
-            <img src={item.fields.featuredImage?.fields.file.url as any} alt={item.fields.title as string} 
+            <img src={(item.fields.featuredImage as any).fields.file.url as any} alt={item.fields.title as string} 
             className={'rounded-lg max-w-sm'}
             />
 
