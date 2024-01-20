@@ -7,6 +7,8 @@ import Link from "next/link"
 import Image from "next/image"
 import cn from "@/util/cn";
 
+import { Search } from 'react-feather';
+
 const navbarElements = [
     {
         label: 'Home',
@@ -70,12 +72,20 @@ export default function MainNavbar ()
                         Blog
                        </H3>
                     </Link>
+                    
+                    <div
+                    className={'px-4 group flex-1 flex items-center group-focus:bg-secondary'}
+                    >
 
+                   <Search 
+                   size={20}
+                   />
                     <Input 
+                    variant={'unstyled'}
                     placeholder={'Search'}
-                    className={'flex-1 bg-secondary hover:bg-transparent mx-3 hidden md:block'}
+                    className={'w-full px-2 mx-2 hidden md:block h-full text-lg rounded-none border-0 border-b-2 border-transparent focus-within:border-black'}
                     />
-
+                     </div>
                     <div className="flex items-center">
                     {
                         navbarElements.map((value, index) => (
