@@ -10,7 +10,7 @@ import cn from "@/util/cn";
 const navbarElements = [
     {
         label: 'Home',
-        href: 'http://localhost:3000',
+        href: process.env.NEXT_PUBLIC_BASE_URL as string || '#',
         className: 'hidden md:flex'
     },
     {
@@ -57,8 +57,8 @@ export default function MainNavbar ()
     }, []);
     return (
         <header className={cn("w-full fixed transition-all flex items-center justify-between duration-300", showNavbar ? 'top-0 md:top-7' : '-top-navbar-height')}>
-            <nav className={cn(" mx-auto w-full md:w-fit flex items-center justify-between rounded-b-lg md:rounded bg-white border-transparent border-none md:border px-4 h-navbar-height transition-all", scrollY > 50 && 'border-secondary drop-shadow-md')}>
-                <ul className="w-full flex items-center justify-center">
+            <nav className={cn("mx-auto w-full max-w-content-width flex items-center justify-between rounded-b-lg md:rounded bg-white border-transparent px-4 h-navbar-height transition-all", scrollY > 0 && 'border border-secondary drop-shadow-md')}>
+                <ul className="w-full flex items-center justify-between">
                     
                     <Link href={"/"} className="px-3 flex items-center flex-shrink-0">
                         <Image src={'/brand/transit-logo-solid.svg'} alt={'logo'} width={45} height={45}
@@ -73,9 +73,10 @@ export default function MainNavbar ()
 
                     <Input 
                     placeholder={'Search'}
-                    className={'bg-white hover:bg-transparent mx-3 hidden md:block'}
+                    className={'flex-1 bg-secondary hover:bg-transparent mx-3 hidden md:block'}
                     />
-                    
+
+                    <div className="flex items-center">
                     {
                         navbarElements.map((value, index) => (
                             <li
@@ -83,6 +84,7 @@ export default function MainNavbar ()
                             >
                                 <Button
                                 variant={'ghost'}
+                                size={'lg'}
                                 className={cn('transition-colors hover:translate-y-0', value.className)}
                                 href={value.href}
                                 >
@@ -91,6 +93,7 @@ export default function MainNavbar ()
                             </li>
                         ))
                     }
+                    </div>
                 </ul> 
             </nav>
         </header>

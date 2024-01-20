@@ -22,3 +22,22 @@ export const getEntry = async (slug: string) => {
   return entry;
 };
 
+export const getPublishedEntries = async () => {
+  const entries = await client.getEntries({
+    content_type: 'blogPost',
+    'fields.published': true
+  });
+  
+  return entries;
+};
+
+export const getPublishedEntry = async (slug: string) => {
+  const entry = await client.getEntries({
+    content_type: 'blogPost',
+    'fields.slug': slug,
+    'fields.published': true,
+    limit: 1
+  });
+  
+  return entry;
+};

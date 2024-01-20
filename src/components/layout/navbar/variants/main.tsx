@@ -5,7 +5,7 @@ import Image from "next/image"
 const navbarElements = [
     {
         label: 'Blog',
-        href: 'http://localhost:3001',
+        href: process.env.NEXT_PUBLIC_BLOG_URL as string || '#',
     },
     {
         label: 'Home',
