@@ -13,7 +13,7 @@ const navbarElements = [
     {
         label: 'Home',
         href: process.env.NEXT_PUBLIC_BASE_URL as string || '#',
-        className: 'hidden md:flex'
+        className: ''
     },
     {
         label: 'About us',
@@ -59,31 +59,26 @@ export default function MainNavbar ()
     }, []);
     return (
         <header className={cn("w-full fixed transition-all flex items-center justify-between duration-300", showNavbar ? 'top-0 md:top-7' : '-top-navbar-height')}>
-            <nav className={cn("mx-auto w-full max-w-content-width flex items-center justify-between rounded-b-lg md:rounded bg-white border-transparent px-4 h-navbar-height transition-all", scrollY > 0 && 'border border-secondary drop-shadow-md')}>
+            <nav className={cn("mx-auto w-full max-w-content-width flex items-center justify-between rounded-b-lg md:rounded bg-white px-4 h-navbar-height transition-all border border-transparent", scrollY > 0 && 'border-secondary drop-shadow-md')}>
                 <ul className="w-full flex items-center justify-between">
                     
                     <Link href={"/"} className="px-3 flex items-center flex-shrink-0">
-                        <Image src={'/brand/transit-logo-solid.svg'} alt={'logo'} width={45} height={45}
-                        className={'w-[45px] h-[45px]'}
+                        <Image src={'/brand/transit-blog.svg'} alt={'logo'} width={70} height={45}
+                        className={'w-[175px] h-auto'}
                         />
-                       <H3
-                       className={'ml-3 '}
-                       >
-                        Blog
-                       </H3>
                     </Link>
                     
                     <div
-                    className={'px-4 group flex-1 flex items-center group-focus:bg-secondary'}
+                    className={'hidden md:flex px-4 group flex-1 items-center group-focus:bg-secondary'}
                     >
 
                    <Search 
-                   size={20}
+                   size={25}
                    />
                     <Input 
                     variant={'unstyled'}
                     placeholder={'Search'}
-                    className={'w-full px-2 mx-2 hidden md:block h-full text-lg rounded-none border-0 border-b-2 border-transparent focus-within:border-black'}
+                    className={'w-full px-2 mx-2 h-full text-lg rounded-none border-0 border-b-2 border-transparent focus-within:border-black'}
                     />
                      </div>
                     <div className="flex items-center">
