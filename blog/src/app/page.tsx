@@ -1,26 +1,8 @@
-// pages/[slug].tsx
-import fs from 'fs';
-import path from 'path';
-import matter from 'gray-matter';
-
-import { serialize } from 'next-mdx-remote/serialize';
-import { MDXRemote } from 'next-mdx-remote/rsc';
-import { Button, H1, H2, H3, H4, P } from '@/components';
-
-import Image from 'next/image';
-import Blog from '@/components/blog';
-
-import readingTime from 'reading-time';
-import { Metadata, ResolvingMetadata } from 'next';
-import { getEntries, getEntry } from '@/util/retrieve';
-
-import { Document } from '@contentful/rich-text-types';
-
-// image type
+import { getPublishedEntries } from '@/util/retrieve';
 
 const Page = async () => {  
   
-  const entries = await getEntries();
+  const entries = await getPublishedEntries();
   
 
   return (
