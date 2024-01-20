@@ -42,7 +42,7 @@ export default function HeroSection()
         className={'relative select-none'}
         >
             <Image src={'/images/landing/map.gif'} quality={100} alt={'map'} width={600} height={600}
-            className={'drop-shadow-lg shadow-primary rounded-lg border-4 border-primary-500'}
+            className={'drop-shadow-lg shadow-primary rounded-lg border-4 border-white'}
             />
 
             <Image src={'/images/landing/phone-mockup.png'} quality={100} alt={'map'} width={270} height={600}
