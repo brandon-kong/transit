@@ -58,13 +58,16 @@ export default function MainNavbar ()
         }
     }, []);
     return (
-        <header className={cn("w-full fixed transition-all flex items-center justify-between duration-300", showNavbar ? 'top-0 md:top-7' : '-top-navbar-height')}>
+        <header className={cn("w-full fixed transition-all flex items-center justify-between duration-300", showNavbar ? 'top-0 md:my-7' : '-top-navbar-height')}>
             <nav className={cn("mx-auto w-full max-w-content-width flex items-center justify-between rounded-b-lg md:rounded bg-white px-4 h-navbar-height transition-all border border-transparent", scrollY > 0 && 'border-secondary drop-shadow-md')}>
                 <ul className="w-full flex items-center justify-between">
                     
                     <Link href={"/"} className="px-3 flex items-center flex-shrink-0">
-                        <Image src={'/brand/transit-blog.svg'} alt={'logo'} width={70} height={45}
-                        className={'w-[175px] h-auto'}
+                        <Image src={'/brand/transit-logo.svg'} alt={'logo'} width={110} height={35}
+                        className={'w-[110px] h-auto'}
+                        />
+                        <Image src={'/brand/transit-blog.svg'} alt={'logo'} width={110} height={35}
+                        className={'w-[40px] h-auto ml-3 self-center'}
                         />
                     </Link>
                     
@@ -78,7 +81,7 @@ export default function MainNavbar ()
                     <Input 
                     variant={'unstyled'}
                     placeholder={'Search'}
-                    className={'w-full px-2 mx-2 h-full text-lg rounded-none border-0 border-b-2 border-transparent focus-within:border-black'}
+                    className={'w-full px-2 mx-2 h-full rounded-none border-0 border-b-2 border-transparent focus-within:border-black'}
                     />
                      </div>
                     <div className="flex items-center">
@@ -89,7 +92,6 @@ export default function MainNavbar ()
                             >
                                 <Button
                                 variant={'ghost'}
-                                size={'lg'}
                                 className={cn('transition-colors hover:translate-y-0', value.className)}
                                 href={value.href}
                                 >

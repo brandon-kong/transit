@@ -8,10 +8,6 @@ const navbarElements = [
         href: process.env.NEXT_PUBLIC_BLOG_URL as string || '#',
     },
     {
-        label: 'Home',
-        href: '#'
-    },
-    {
         label: 'About Us',
         href: '#'
     }

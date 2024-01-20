@@ -1,13 +1,14 @@
 'use client';
 
+import AuthNavbar from "./variants/auth";
 import MainNavbar from "./variants/main"
 
 import { usePathname } from "next/navigation"
 
 const Navbars = {
     '/': <MainNavbar />,
-    '/sign-in': <></>,
-    '/sign-up': <></>,
+    '/sign-in': <AuthNavbar />,
+    '/sign-up': <AuthNavbar />,
     '/authorize': <></>,
 }
 

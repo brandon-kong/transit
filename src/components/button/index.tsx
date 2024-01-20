@@ -8,7 +8,7 @@ const variants = {
     "primary-light": "bg-primary-100 hover:bg-primary-200 text-primary-900 shadow-sm",
     "secondary": "bg-secondary-500 hover:bg-secondary-600 text-black shadow-sm",
     "ghost": "bg-transparent hover:bg-gray-100 text-gray-700",
-    "outline": "bg-transparent border border-primary-500 hover:bg-primary-50 text-primary-500",
+    "outline": "bg-transparent border border-primary-500 hover:bg-primary-50 hover:text-primary-800 text-primary-500",
     "link": "bg-transparent text-primary-700 underline inline-flex h-fit px-0",
     "danger": "bg-red-500 hover:bg-red-600 text-white shadow-sm",
 };

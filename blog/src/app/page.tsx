@@ -9,17 +9,19 @@ const Page = async () => {
   <main
   className={'p-content-padding py-hero-pt max-w-content-width mx-auto'}
   >
+
+    <div
+    className={'flex flex-wrap gap-8 justify-center'}
+    >
+
+    
     {
       entries.items.map((item, index) => {
         return (
           <div
           key={index}
-          className={'flex flex-col gap-5 border shadow-md rounded-lg p-4 max-w-sm'}
+          className={'flex flex-col gap-5 border shadow-md rounded-lg p-4 w-full'}
           >
-            <img src={(item.fields.featuredImage as any).fields.file.url as any} alt={item.fields.title as string} 
-            className={'rounded-lg max-w-sm'}
-            />
-
             <div
             className={'flex flex-col gap-5 justify-between'}
             >
@@ -39,7 +41,7 @@ const Page = async () => {
               </div>
 
               <div
-              className={'flex gap-5'}
+              className={'flex gap-5 self-start'}
               >
                 <Button
                 variant={'outline'}
@@ -57,6 +59,8 @@ const Page = async () => {
         )
       })
     }
+
+    </div>
   </main>
   )
 };
