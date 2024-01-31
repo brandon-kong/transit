@@ -58,8 +58,8 @@ export default function MainNavbar ()
         }
     }, []);
     return (
-        <header className={cn("w-full fixed transition-all flex items-center justify-between duration-300", showNavbar ? 'top-0 md:my-7' : '-top-navbar-height')}>
-            <nav className={cn("mx-auto w-full max-w-content-width flex items-center justify-between rounded-b-lg md:rounded bg-white px-4 h-navbar-height transition-all border border-transparent", scrollY > 0 && 'border-secondary drop-shadow-md')}>
+        <header className={cn("w-full fixed transition-all flex items-center justify-between duration-300", showNavbar ? 'top-0' : '-top-navbar-height')}>
+            <nav className={cn("mx-auto w-full flex items-center justify-between bg-white px-5 h-navbar-height transition-all border border-transparent", scrollY > 0 && 'border-secondary drop-shadow-sm')}>
                 <ul className="w-full flex items-center justify-between">
                     
                     <Link href={"/"} className="px-3 flex items-center flex-shrink-0">
@@ -76,7 +76,7 @@ export default function MainNavbar ()
                     >
 
                    <Search 
-                   size={25}
+                   size={20}
                    />
                     <Input 
                     variant={'unstyled'}
