@@ -19,10 +19,7 @@ export default function MainNavbar ()
             <nav className="flex items-center justify-between mx-auto max-w-content-width w-full py-2">
                 <div className="flex items-center flex-1">
                     <Link href={"/"} className="flex items-center flex-shrink-0">
-                        <Image src={'/brand/transit-logo-solid.svg'} alt={'logo'} width={35} height={35}
-                        className="mr-2"
-                        />
-                        <Image src={'/brand/transit-logo.svg'} alt={'logo'} width={110} height={55} />
+                        <Image src={'/brand/transit.svg'} alt={'logo'} width={140} height={55} />
                        
                     </Link>
 
