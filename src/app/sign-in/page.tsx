@@ -5,7 +5,7 @@ import Image from 'next/image'
 
 export default function SignIn() {
   return (
-    <main className="flex items-center w-full min-h-screen py-hero-pt">
+    <main className="flex items-center w-full min-h-screen py-hero-pt px-content-padding-x">
       <div
         className={'max-w-sm mx-auto w-full'}
       >

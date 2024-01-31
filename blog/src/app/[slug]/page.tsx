@@ -114,11 +114,11 @@ const Post = async ({ params }: { params: { slug: string}}) => {
       </H1>
 
       <div
-      className={'mt-5 flex flex-col md:flex-row justify-center md:justify-between'}
+      className={'mt-5 flex flex-col md:flex-row-reverse justify-center md:justify-between'}
       >
 
         <P
-        className={'text-lg text-primary'}
+        className={'text-lg text-primary hidden md:block'}
         >
         {readingTime(content).text}
         </P>

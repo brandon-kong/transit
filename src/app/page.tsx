@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <main className="">
       <div
-      className={'bg-gradient-to-br from-white to-50% to-primary-50 px-content-padding-x'}
+      className={'bg-gradient-to-br from-white to-50% to-primary-50/80 px-content-padding-x'}
       >
         <HeroSection />
       </div>
